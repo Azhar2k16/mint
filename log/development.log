@@ -1,0 +1,163 @@
+Started GET "/" for 127.0.0.1 at 2023-11-11 12:28:04 +0000
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/dhh/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/dhh/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.5ms | Allocations: 383)
+Completed 200 OK in 39ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 7459)
+
+
+Started GET "/" for ::1 at 2024-03-23 17:25:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/dhh/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/dhh/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 383)
+Completed 200 OK in 19ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 4495)
+
+
+Started GET "/" for ::1 at 2024-03-23 17:33:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (8.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20240323173340_create_posts.rb
+
+
+):
+  
+activerecord (7.1.2) lib/active_record/migration.rb:754:in `check_pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:643:in `block (2 levels) in call'
+activesupport (7.1.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.2) lib/active_record/migration.rb:648:in `block in call'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `synchronize'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/rails/actions" for ::1 at 2024-03-23 17:34:04 +0000
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (41.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-03-23 17:34:04.026644', '2024-03-23 17:34:04.026672') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20240323173340)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240323173340') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2024-03-23 17:34:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 28.6ms | Allocations: 1733)
+  Rendered layout layouts/application.html.erb (Duration: 976.5ms | Allocations: 100003)
+Completed 200 OK in 1275ms (Views: 983.6ms | ActiveRecord: 4.6ms | Allocations: 110361)
+
+
+Started GET "/posts/new" for ::1 at 2024-03-23 17:34:07 +0000
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 119.6ms | Allocations: 4741)
+  Rendered posts/new.html.erb within layouts/application (Duration: 121.6ms | Allocations: 5064)
+  Rendered layout layouts/application.html.erb (Duration: 126.9ms | Allocations: 7244)
+Completed 200 OK in 337ms (Views: 128.4ms | ActiveRecord: 1.6ms | Allocations: 16514)
+
+
+Started POST "/posts" for ::1 at 2024-03-23 17:34:25 +0000
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"NCVA", "description"=>"Campagin for lonners\n"}, "commit"=>"Create Post"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+  [1m[36mPost Create (8.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "NCVA"], ["description", "Campagin for lonners\n"], ["created_at", "2024-03-23 17:34:25.802540"], ["updated_at", "2024-03-23 17:34:25.802540"]]
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (23.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 58ms (ActiveRecord: 32.4ms | Allocations: 3826)
+
+
+Started GET "/posts/1" for ::1 at 2024-03-23 17:34:25 +0000
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 1.3ms | Allocations: 218)
+  Rendered posts/show.html.erb within layouts/application (Duration: 15.2ms | Allocations: 1475)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 3622)
+Completed 200 OK in 97ms (Views: 25.0ms | ActiveRecord: 0.6ms | Allocations: 8934)
+
+
+Started DELETE "/posts/1" for ::1 at 2024-03-23 17:34:29 +0000
+Processing by PostsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:52:in `destroy'
+  [1m[36mPost Destroy (5.0ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/posts_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 37ms (ActiveRecord: 6.0ms | Allocations: 2882)
+
+
+Started GET "/posts" for ::1 at 2024-03-23 17:34:29 +0000
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 831)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 2866)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.2ms | Allocations: 3161)
+
+
