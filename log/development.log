@@ -161,3 +161,133 @@ Processing by PostsController#index as TURBO_STREAM
 Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.2ms | Allocations: 3161)
 
 
+Started GET "/posts/new" for ::1 at 2024-03-23 19:18:55 +0000
+Started GET "/posts/new" for ::1 at 2024-03-23 19:18:55 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 15.4ms | Allocations: 5413)
+  Rendered posts/_form.html.erb (Duration: 17.4ms | Allocations: 8276)
+  Rendered posts/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 8519)
+  Rendered posts/new.html.erb within layouts/application (Duration: 20.3ms | Allocations: 8855)
+  Rendered layout layouts/application.html.erb (Duration: 245.3ms | Allocations: 69655)
+Completed 200 OK in 297ms (Views: 252.7ms | ActiveRecord: 0.0ms | Allocations: 88115)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 255.8ms | Allocations: 73509)
+Completed 200 OK in 308ms (Views: 260.3ms | ActiveRecord: 2.6ms | Allocations: 92052)
+
+
+Started GET "/posts" for ::1 at 2024-03-23 19:18:58 +0000
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 2316)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 4495)
+Completed 200 OK in 28ms (Views: 13.9ms | ActiveRecord: 0.5ms | Allocations: 6104)
+
+
+Started GET "/posts/new" for ::1 at 2024-03-23 19:19:00 +0000
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 12.6ms | Allocations: 888)
+  Rendered posts/new.html.erb within layouts/application (Duration: 13.5ms | Allocations: 971)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 3005)
+Completed 200 OK in 34ms (Views: 29.4ms | ActiveRecord: 0.0ms | Allocations: 3326)
+
+
+Started POST "/posts" for ::1 at 2024-03-23 19:19:03 +0000
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"asdasd", "description"=>"asdasd"}, "commit"=>"Create Post"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+  [1m[36mPost Create (3.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "asdasd"], ["description", "asdasd"], ["created_at", "2024-03-23 19:19:03.817157"], ["updated_at", "2024-03-23 19:19:03.817157"]]
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 22ms (ActiveRecord: 5.1ms | Allocations: 4073)
+
+
+Started GET "/posts/2" for ::1 at 2024-03-23 19:19:03 +0000
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.5ms | Allocations: 218)
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1431)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3587)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.1ms | Allocations: 6513)
+
+
+Started GET "/posts" for ::1 at 2024-03-23 19:19:05 +0000
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.3ms | Allocations: 18)
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1063)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 3103)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.3ms | Allocations: 3402)
+
+
+Started GET "/posts/new" for ::1 at 2024-03-23 19:19:08 +0000
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.1ms | Allocations: 817)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 897)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2930)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 3203)
+
+
+Started POST "/posts" for ::1 at 2024-03-23 19:19:12 +0000
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"asdas", "description"=>"asdasdasdasd"}, "commit"=>"Create Post"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+  [1m[36mPost Create (7.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "asdas"], ["description", "asdasdasdasd"], ["created_at", "2024-03-23 19:19:12.912267"], ["updated_at", "2024-03-23 19:19:12.912267"]]
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 29ms (ActiveRecord: 8.5ms | Allocations: 2498)
+
+
+Started GET "/posts/3" for ::1 at 2024-03-23 19:19:12 +0000
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 487)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2516)
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 3305)
+
+
+Started GET "/" for ::1 at 2024-03-23 19:19:37 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.9ms | Allocations: 251)
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 32.5ms | Allocations: 12924)
+  Rendered layout layouts/application.html.erb (Duration: 181.0ms | Allocations: 48834)
+Completed 200 OK in 211ms (Views: 183.4ms | ActiveRecord: 3.3ms | Allocations: 58912)
+
+

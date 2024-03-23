@@ -6,7 +6,6 @@ gem "rails", "~> 7.1.1"
 
 gem "sprockets-rails"
 
-gem 'pg'
 
 gem "puma", ">= 5.0"
 
@@ -17,6 +16,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 gem "jbuilder"
+gem "sqlite3", "~> 1.4"
 
 gem "redis", ">= 4.0.1"
 
@@ -26,7 +26,6 @@ gem "bootsnap", require: false
 
 
 group :development, :test do
-  gem "sqlite3", "~> 1.4"
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
 end
 

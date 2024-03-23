@@ -15,6 +15,8 @@ module MyApp
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w(assets tasks))
+    config.active_support.key_generator_hash_digest_class = OpenSSL::Digest::SHA1
+
 
     # Configuration for the application, engines, and railties goes here.
     #
