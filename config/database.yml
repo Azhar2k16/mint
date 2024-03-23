@@ -13,6 +13,12 @@ test:
   <<: *default
   database: storage/test.sqlite3
 
+# production:
+#   <<: *default
+#   database: storage/production.sqlite3
 production:
-  <<: *default
-  database: storage/production.sqlite3
+  adapter: postgresql
+  database: mint
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  password: <%= ENV['PGSQL_DATABASE_PASSWORD'] %>
+  encoding: unicode
